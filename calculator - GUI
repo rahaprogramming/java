@@ -1,0 +1,63 @@
+/*
+ * @author Ralph Harris
+ * calculator program for Miss Lindy :)
+ * CSS 346 - written 9/3/2017 at 3:39 pm
+ * 
+ * This program doesn't do much except display an awesome calculator! :)
+ */
+package calculator;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
+public class Calculator extends JFrame{
+    // Declare variables 
+   private JPanel CalculatorButtons;// the buttons
+   private JTextField CalculatorTextField;// the top text field
+  
+   public Calculator(){
+       
+       super("Awesome Calculator");//the name - displays on programs title bar.
+       Container container = getContentPane();// the content holder
+
+       CalculatorButtons = new JPanel();
+       CalculatorButtons.setLayout(new GridLayout(4,4,2,2));// the layout
+
+       CalculatorTextField = new JTextField();//set text field
+      
+       //Below are our buttons 
+       CalculatorButtons.add(new JButton("7"));
+       CalculatorButtons.add(new JButton("8"));
+       CalculatorButtons.add(new JButton("9"));
+       CalculatorButtons.add(new JButton("/"));
+       CalculatorButtons.add(new JButton("4"));
+       CalculatorButtons.add(new JButton("5"));
+       CalculatorButtons.add(new JButton("6"));
+       CalculatorButtons.add(new JButton("*"));
+       CalculatorButtons.add(new JButton("1"));
+       CalculatorButtons.add(new JButton("2"));
+       CalculatorButtons.add(new JButton("3"));
+       CalculatorButtons.add(new JButton("-"));
+       CalculatorButtons.add(new JButton("0"));
+       CalculatorButtons.add(new JButton("."));
+       CalculatorButtons.add(new JButton("="));
+       CalculatorButtons.add(new JButton("+"));
+ 
+       // next we add our buttons and text field to the container
+       container.add(CalculatorTextField, BorderLayout.NORTH);
+       container.add(CalculatorButtons, BorderLayout.CENTER);
+       
+       
+       
+       setSize(250,250);// size is 250X250 px
+       setVisible(true);// we do want to see it
+   }
+   public static void main (String args[])
+   {
+       Calculator calculator = new Calculator();// and... GO!
+       calculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//exit app on close
+   }
+}
+     
