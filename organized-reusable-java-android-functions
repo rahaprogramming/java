@@ -1,1 +1,21 @@
+/*********************************************************** 
+                    accessing file in url
+**************************************************************/
+private class DownloadFilesTask extends AsyncTask<URL, Integer, Long> {
+protected Long doInBackground(URL... urls) {
+// code that will run in the background
+return ;
+}
 
+protected void onProgressUpdate(Integer... progress) {
+// receive progress updates from doInBackground
+}
+
+protected void onPostExecute(Long result) {
+// update the UI after background processes completes
+}
+}
+
+/*********************************************************** 
+                    end accessing file in url
+**************************************************************/
