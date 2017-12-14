@@ -19,3 +19,18 @@ protected void onPostExecute(Long result) {
 /*********************************************************** 
                     end accessing file in url
 **************************************************************/
+
+/*********************************************************** 
+                    easy accessing file in url
+**************************************************************/
+import java.util.Scanner;
+import java.net.*;
+import java.io.*;
+
+java.util.Scanner s = new java.util.Scanner(new java.net.URL("http://rahaprogramming.com/familyTracker/test.json").openStream()); 
+      String contents = s.useDelimiter("\\A").next();
+      System.out.println(contents);
+      s.close();
+/*********************************************************** 
+                    end easy accessing file in url
+**************************************************************/
