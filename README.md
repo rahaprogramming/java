@@ -1,2 +1,2 @@
 # java
-various simple java programs
+various simple java programs from class
